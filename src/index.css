@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-surface text-navy-900 font-sans;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-navy-50;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-navy-300 rounded-full;
+  }
+}
+
+@layer components {
+  .badge-synthetic {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-gold-50 text-gold-700 border border-gold-200;
+  }
+  .badge-official {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-teal-50 text-teal-700 border border-teal-200;
+  }
+  .badge-derived {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-navy-50 text-navy-600 border border-navy-200;
+  }
+  .badge-insufficient {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-red-50 text-red-600 border border-red-200;
+  }
+  .kpi-card {
+    @apply bg-white rounded-xl border border-navy-100 p-5 shadow-sm hover:shadow-md transition-shadow;
+  }
+  .section-heading {
+    @apply text-xl font-semibold text-navy-900 mb-1;
+  }
+  .section-subheading {
+    @apply text-sm text-navy-400 mb-6;
+  }
+  .filter-label {
+    @apply block text-xs font-medium text-navy-500 mb-1;
+  }
+  .filter-select {
+    @apply w-full rounded-lg border border-navy-200 bg-white text-navy-800 text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-400;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-teal-500 text-white text-sm font-medium hover:bg-teal-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-navy-200 text-navy-700 text-sm font-medium hover:bg-navy-50 transition-colors;
+  }
+  .btn-gold {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gold-500 text-white text-sm font-medium hover:bg-gold-600 transition-colors;
+  }
+  .card {
+    @apply bg-white rounded-xl border border-navy-100 shadow-sm;
+  }
+  .table-header {
+    @apply text-xs font-semibold text-navy-500 uppercase tracking-wide;
+  }
+  .insufficient-data {
+    @apply flex items-center gap-2 text-sm text-navy-400 italic;
+  }
+}
